@@ -12,6 +12,7 @@
     --font16 : 16px;
     --font20 : 20px;
     --font40 : 40px;
+    --font48 : 48px;
     --font64 : 64px;
     --font150 : 150px;
     --font200 : 200px;
@@ -197,4 +198,107 @@ ul,li {
     font-size: var(--font16);
     font-weight: 400;
     color : var(--color-gray);
+}
+
+
+/* About Part */
+#about {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    background-color: var(--color-lightBackground);
+}
+.about__storeImgs {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.storeImgs__up, .storeImgs__down {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: var(--font10);
+}
+.storeImgs__up>img, .store__img2Container {
+    width: 48%;
+}
+.store__img2Container, .store__img3Container {
+    position: relative;
+}
+.store__img2Container img {
+    position: absolute;
+    width: 75%;
+    bottom: 0;
+}
+.store__img3Container, .storeImgs__down>img {
+    width: 48%;
+}
+.store__img3Container img {
+    width: 75%;
+    position: absolute;
+    right :0;
+}
+
+.about__description {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.description__titleContainer {
+    display: flex;
+    align-items: center;
+}
+.description__title {
+    font-family: var(--title-font);
+    font-size: var(--font20);
+    color : var(--color-orange);
+    font-weight: 400;
+}
+.titleLine {
+    border-top: 2px solid var(--color-orange);
+    width: var(--font40);
+}
+.description__subtitle {
+    font-family: var(--primary-font);
+    font-size: var(--font40);
+    font-weight: 800;
+}
+.description__subtitle i {
+    color : var(--color-orange);
+}
+.about__description>p {
+    font-family: var(--secondary-font);
+    color : var(--color-gray);
+}
+.description__experiences {
+    width: 100%;
+    display: flex;
+}
+.experience__first, .experience__second {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid var(--color-orange);
+}
+.first__left, .second__left {
+    font-family: var(--primary-font);
+    font-size: var(--font48);
+    margin : 0 var(--font16);
+    color : var(--color-orange);
+}
+.first__right, .second__right {
+    display: flex;
+    flex-direction: column;
+}
+.first__right--up, .second__right--up {
+    font-family: var(--primary-font);
+    color : var(--color-gray);
+}
+.first__right--down, .second__right--down {
+    font-family: var(--secondary-font);
+    color : var(--color-black);
+    font-weight: 600;
 }
