@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawsome -->
+    <script src="https://kit.fontawesome.com/4a51d562a2.js" crossorigin="anonymous"></script>
+
+    <!-- Css link & Js link -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav">
+            <a href="#" class="nav__logo">
+                <i class="fa-solid fa-utensils"></i> 
+                <span class="logo__title">&nbspRestoran</span>
+            </a>
+            <ul class="nav__menus">
+                <li class="menu"><a href="#">Home</a></li>
+                <li class="menu"><a href="#">About</a></li>
+                <li class="menu"><a href="#">Service</a></li>
+                <li class="menu"><a href="#">Menu</a></li>
+                <li class="menu"><a href="#">Pages <i class="fa-solid fa-sort-down"></i></a></li>
+                <li class="menu"><a href="#">Contact</a></li>
+                <li class="menu"><a href="#">Book a Table</a></li>
+            </ul>
+        </nav>
+        <div class="header__underContainer">
+            <div class="header__leftContent">
+                <h1 class="leftContent__title">
+                    Enjoy Our<br>
+                    Delicious Meal
+                </h1>
+                <p class="leftContent__script">
+                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore<br> erat amet
+                </p>
+                <a href="#" class="leftContent__bookBtn">Book a Table</a>
+            </div>
+            <div class="leftContent__imgContainer">
+                <img src="./image/hero.png" alt="headerImg" class="headerImg">
+            </div>
+        </div>  
+    </header>
+
+    <!-- Services Part -->
+    <section id="services">
+        <div class="service">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="service__title">
+                Master Chefs
+            </span>
+            <p class="service__content">
+                Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+            </p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-utensils"></i>
+            <span class="service__title">
+                Quality Food
+            </span>
+            <p class="service__content">
+                Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+            </p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span class="service__title">
+                Online Order
+            </span>
+            <p class="service__content">
+                Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
+            </p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-headset"></i>
+            <span class="service__title">
+                24/7 Service
+            </span>
+            <p class="service__content">
+                Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam            </p>
+        </div>
+    </section>
+
+    <!-- About Part -->
+    <section id="about">
+        <div class="about__storeImgs">
+            <div class="storeImgs__up">
+                <img src="./image/about-1.jpg" alt="Store img1">
+                <img src="./image/about-2.jpg" alt="Store img2">
+            </div>
+            <div class="storeImgs__down">
+                <img src="./image/about-3.jpg" alt="Store img3">
+                <img src="./image/about-4.jpg" alt="Store img4">
+            </div>
+        </div>
+        <div class="about__description">
+            <span class="description__title">about us</span>
+            <span class="description__subtitle">Welcome to <i class="fa-solid fa-cart-plus"></i>Restoran</span>
+            <p class="description__contents">
+                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.<br><br>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+            </p>
+            <div class="description__experiences">
+                <div class="experience__first">
+                    <h2 class="first__left">15</h2>
+                    <div class="first__right">
+                        <div class="first__right--up">Years of</div>
+                        <div class="first__right--down">Experience</div>
+                    </div>    
+                </div>
+                <div class="experience__second">
+                    <h2 class="second__left">50</h2>
+                    <div class="second__right">
+                        <div class="second__right--up">Popular</div>
+                        <div class="second__right--down">MASTER CHEFS</div>
+                    </div>    
+                </div>
+            </div>
+            <a href="#" class="description__readMore">
+                Read More
+            </a>
+        </div>
+    </section>
+
+    <!-- Food Parts -->
+    <section id="foods">
+        <h1 class="foods__title"></h1>
+        <div class="foods__collections">
+            <button class="collection">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <div>
+                    <span class="collection__hyung">Popular</span>
+                    <p class="collection__meal">Breakfast</p>
+                </div>
+            </button>
+            <button class="collection">
+                <i class="fa-solid fa-burger"></i>
+                <div>
+                    <span class="collection__hyung">Special</span>
+                    <p class="collection__meal">Launch</p>
+                </div>
+            </button>
+            <button class="collection">
+                <i class="fa-solid fa-cart-plus"></i>
+                <div>
+                    <span class="collection__hyung">Lovely</span>
+                    <p class="collection__meal">Dinner</p>
+                </div>
+            </button>
+        </div>
+        <div class="foods_choicesContainer">
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-1.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-2.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-3.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-4.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-1.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-2.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-3.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Breakfast">
+                <img src="./image/menu-4.jpg" alt="Breakfast__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Breakfast</span>
+                        <span class="detail__up--cost">$115</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-5.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-6.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-5.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-6.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-5.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-6.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-5.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-6.jpg" alt="Launch__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Launch</span>
+                        <span class="detail__up--cost">$120</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Dinner">
+                <img src="./image/menu-7.jpg" alt="Dinner__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Dinner</span>
+                        <span class="detail__up--cost">$125</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Launch">
+                <img src="./image/menu-8.jpg" alt="Dinner__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Dinner</span>
+                        <span class="detail__up--cost">$125</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Part -->
+    <section id="reservation">
+        <div class="reservation__bgYoutube">
+            <button><span></span></button>
+        </div>
+        <div class="reservation__online">
+            <h2 class="online__title">Reservation <span></span> </h2>
+            <h1 class="online__subtitle">Book A Table Online</h1>
+            <form method="post">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="datetime" placeholder="Date & Time">
+                <select name="" id="">
+                    <option disabled selected value>No Of People</option>
+                    <option value="People1">People1</option>
+                    <option value="People2">People2</option>
+                    <option value="People3">People3</option>
+                </select>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit">BOOK NOW
+            </form>
+        </div>
+    </section>
+
+    <!-- members Part -->
+    <section id="members">
+        <h1 class="members__title">Team members</h1>
+        <h2 class="members__subtitle">Our Master Chefs</h2>
+        <div class="members__member">
+            <div class="member">
+                <img src="./image/team-1.jpg" alt="Member1">
+                <p class="member__name">Full Name</p>
+                <p class="member__designation">designation</p>
+            </div>
+            <div class="member">
+                <img src="./image/team-2.jpg" alt="Member2">
+                <p class="member__name">Full Name</p>
+                <p class="member__designation">designation</p>
+            </div>
+            <div class="member">
+                <img src="./image/team-3.jpg" alt="Member3">
+                <p class="member__name">Full Name</p>
+                <p class="member__designation">designation</p>
+            </div>
+            <div class="member">
+                <img src="./image/team-4.jpg" alt="Member4">
+                <p class="member__name">Full Name</p>
+                <p class="member__designation">designation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Part -->
+    <section id="testimonials">
+        <h1 class="testimonials__title">Testimonial</h1>
+        <h2 class="testimonials__subtitle">Our Clients Say!!!</h2>
+        <ul class="testimonials_testimonial">
+            <li class="testimonial">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="testimonal__saying">
+                    Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet elmod eos labore Diam
+                </p>
+                <div class="testimonial__client">
+                    <img src="./image/testimonial-1.jpg" alt="Client1">
+                    <div class="client__information">
+                        <span class="client__information--name">Client Name</span>
+                        <p class="client__information--profession">Profession</p>
+                    </div>
+                </div>
+            </li>
+            <li class="testimonial">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="testimonal__saying">
+                    Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet elmod eos labore Diam
+                </p>
+                <div class="testimonial__client">
+                    <img src="./image/testimonial-2.jpg" alt="Client2">
+                    <div class="client__information">
+                        <span class="client__information--name">Client Name</span>
+                        <p class="client__information--profession">Profession</p>
+                    </div>
+                </div>
+            </li>
+            <li class="testimonial">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="testimonal__saying">
+                    Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet elmod eos labore Diam
+                </p>
+                <div class="testimonial__client">
+                    <img src="./image/testimonial-3.jpg" alt="Client3">
+                    <div class="client__information">
+                        <span class="client__information--name">Client Name</span>
+                        <p class="client__information--profession">Profession</p>
+                    </div>
+                </div>
+            </li>
+            <li class="testimonial">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="testimonal__saying">
+                    Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet elmod eos labore Diam
+                </p>
+                <div class="testimonial__client">
+                    <img src="./image/testimonial-4.jpg" alt="Client4">
+                    <div class="client__information">
+                        <span class="client__information--name">Client Name</span>
+                        <p class="client__information--profession">Profession</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="testimonials__btns">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer__up">
+            <div class="footer__company">
+                <h1 class="company__title">Company</h1>
+                <ul class="company__lists">
+                    <li>> About Us</li>
+                    <li>> Comtact Us</li>
+                    <li>> Reservation</li>
+                    <li>> Privacy Policy</li>
+                    <li>> Terms & Condition</li>
+                </ul>
+            </div>
+            <div class="footer__comtact">
+                <h1 class="comtact__title">Company</h1>
+                <ul class="comtact__lists">
+                    <li><i class="fa-solid fa-location-dot"></i><p>123 Street, New York, USA</p> </li>
+                    <li><i class="fa-solid fa-phone"></i><p>+012 345 67890</p></li>
+                    <li><i class="fa-solid fa-envelope"></i><p>info@example.com</p></li>
+                    <li>
+                        <ul>
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                            <li><i class="fa-brands fa-youtube"></i></li>
+                            <li><i class="fa-brands fa-linkedin-in"></i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__opening">
+                <h1 class="opening__title">Opening</h1>
+                <ul class="opening__lists">
+                    <li>
+                        <span>Monday - Saturday</span>
+                        <p>09AM - 09PM</p>
+                    </li>
+                    <li>
+                        <span>Sunday</span>
+                        <p>10AM - 08PM</p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="footer__Newsletter">
+                <h1 class="Newsletter__title">Company</h1>
+                <p class="Newsletter__notice">
+                    Dolor amet sit justo amet elitr clita ipsum elitr est.
+                </p>
+                <form action="">
+                    <input type="email">
+                </form>
+            </div>
+        </div>
+        <div class="footer__down">
+            <p class="footer__down--left">©<a href="#">Your Site Name</a>, All Right Reserved. Designed By <a href="https://htmlcodex.com/" target="_blank">HTML Codex</a></p>
+            <ul class="footer__down--right">
+                <li>Home</li>
+                <li>Cookies</li>
+                <li>Help</li>
+                <li>FQAs</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
