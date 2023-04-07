@@ -5,6 +5,7 @@
     --title-font : 'Pacifico', sans-serif;
     /* Font-Size */
 
+    --fontm40 : -40px;
     --font5 : 5px;
     --font10 : 10px;
     --font14 : 14px;
@@ -14,6 +15,7 @@
     --font40 : 40px;
     --font48 : 48px;
     --font64 : 64px;
+    --font100 : 100px;
     --font150 : 150px;
     --font200 : 200px;
 
@@ -34,6 +36,7 @@ html,body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -43,7 +46,7 @@ ul,li {
 }
 
 #header {
-    width: 70%;
+    width: 55%;
     background: url(./image/bg-hero.jpg) no-repeat center/cover var(--color-darkBackground);
     background-blend-mode: multiply;
     padding : var(--font10) 0;
@@ -163,7 +166,7 @@ ul,li {
 /* Services Part */
 #services {
     padding: var(--font150) 0;
-    width: 70%;
+    width: 55%;
     display: flex;
     justify-content: space-evenly;
     background-color: var(--color-lightBackground);
@@ -175,10 +178,12 @@ ul,li {
     flex-direction: column;
     justify-content: flex-start;
     padding : var(--font16);
+    color : var(--color-black);
+    transition: background-color 0.7s, color 0.7s;
 }
 .service:hover {
     background-color: var(--color-orange);
-    transition: all 0.7s;
+    color : var(--color-white);
 }
 .service:hover i, .service:hover span, .service:hover p {
     color : var(--color-white);
@@ -205,7 +210,7 @@ ul,li {
 #about {
     display: flex;
     justify-content: space-evenly;
-    width: 70%;
+    width: 55%;
     background-color: var(--color-lightBackground);
 }
 .about__storeImgs {
@@ -301,4 +306,463 @@ ul,li {
     font-family: var(--secondary-font);
     color : var(--color-black);
     font-weight: 600;
+}.description__readMore {
+    margin-top: var(--font15);
+    color : var(--color-white);
+    background-color: var(--color-orange);
+    width: var(--font150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding : var(--font14);
+    font-size: var(--font16);
+    font-family: var(--primary-font);
+    border-radius: 3px;
+}
+
+.description__readMore:hover {
+    opacity: 0.8;
+    transition: opacity 0.7s;
+}
+
+/* Food Parts */
+#foods {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-lightBackground);
+    width: 55%;
+    align-items: center;
+    padding : var(--font10);
+    box-sizing: border-box;
+}
+.foods__titleContainer {
+    display: flex;
+    margin-top: var(--font48);
+    align-items: center;
+}
+.foods__title {
+    font-family: var(--title-font);
+    font-size: var(--font20);
+    color : var(--color-orange);
+    font-weight: 400;
+}
+.foods__subtitle {
+    font-family: var(--primary-font);
+    font-size: var(--font40);
+    font-weight: 800;
+}
+.foods__collections {
+    display: flex;
+    margin-top: var(--font20);
+}
+.collection {
+    background-color: var(--color-lightBackground);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin : 0 var(--font10);
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    padding : var(--font10)
+}
+.collection i {
+    font-size: var(--font40);
+    color : var(--color-orange);
+}
+.collection div {
+    margin-left: var(--font10);
+}
+.collection__hyung {
+    font-family: var(--secondary-font);
+    font-size: var(--font14);
+    color : var(--color-gray);
+    font-weight: 500;
+}
+.collection__meal {
+    margin : 0;
+    font-size: var(--font16);
+    font-family: var(--primary-font);
+    font-weight: 800;
+}
+.foods_choicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--font40);
+}
+.choice {
+    display: flex;
+    width: 50%;
+    padding : var(--font10);
+    box-sizing: border-box;
+}
+.choice>img {
+    width: var(--font100);
+    height: var(--font100);
+}
+.choice__detail {
+    margin-left: var(--font10);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detail__up {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font20);
+    color :var(--color-black);
+    font-family: var(--primary-font);
+    font-weight: 800;
+    border-bottom: 0.5px solid var(--color-gray);
+}
+.detail__up span:nth-child(2) {
+    color : var(--color-orange);
+}
+.detail__down {
+    margin : 0;
+    font-size: var(--font14);
+    font-family: var(--secondary-font);
+    color : var(--color-gray);
+}
+
+/* Reservation Part */
+#reservation {
+    padding-top: var(--font100);
+    width: 55%;
+    display: flex;
+    background-color: var(--color-lightBackground);
+}
+.reservation__bgYoutube {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background: url(./image/video.jpg) no-repeat center/cover;
+}
+.reservation__bgYoutube>button:nth-child(1) {
+    position: absolute;
+    z-index: 2;
+    width: var(--font100);
+    height: var(--font100);
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    border: none;
+}
+.reservation__bgYoutube>button:nth-child(2) {
+    position: absolute;
+    z-index: 1;
+    width: var(--font100);
+    height: var(--font100);
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-orange);
+    animation: opacity 1.2s infinite;
+}
+
+@keyframes opacity {
+    0% {
+        width: var(--font100);
+        height: var(--font100);
+        opacity: 1;
+    }
+    100% {
+        width: var(--font150);
+        height: var(--font150);
+        opacity: 0;
+    }
+}
+
+.reservation__bgYoutube i {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    padding-left: var(--font5);
+}
+
+.reservation__online {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding : var(--font40);
+    background-color: var(--color-darkBackground);
+}
+.online__title {
+    font-family: var(--title-font);
+    font-size: var(--font20);
+    color : var(--color-orange);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    
+}
+.online__subtitle {
+    font-family: var(--primary-font);
+    font-size: var(--font40);
+    font-weight: 800;
+    color : var(--color-white);
+    margin-top: 0;
+}
+.reservation__online>form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reservation__online > form > input[type="text"],
+.reservation__online > form > input[type="email"],
+.reservation__online > form > input[type="datetime"],
+.reservation__online > form > select {
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    padding : var(--font10);
+    margin: var(--font10);
+}
+.reservation__online > form > textarea {
+    width: 100%;
+    margin : var(--font10);
+}
+.reservation__online>form>input[type="submit"] {
+    width: 100%;
+    margin : var(--font10);
+    padding: var(--font10);
+    background-color: var(--color-orange);
+    border-radius: 5px;
+    border: none;
+    color :var(--color-white); 
+    font-size: var(--font16);
+    font-family: var(--primary-font);
+}
+
+/* Members Part */
+#members {
+    width: 55%;
+    background-color: var(--color-lightBackground);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.members__titleContainer {
+    margin-top: var(--font64);
+    display: flex;
+    align-items: center;
+}
+.members__title {
+    font-family: var(--title-font);
+    font-size: var(--font20);
+    color : var(--color-orange);
+    font-weight: 400;
+}
+
+.members__subtitle {
+    font-family: var(--primary-font);
+    font-size: var(--font40);
+    font-weight: 800;
+}
+.members__member {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.member {
+    position: relative;
+    width: 21%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.member:hover .member__btnHidden  {
+    height: 0;
+}
+.member:hover img {
+    transform: scale(1.2);
+}
+.member__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    margin :  var(--font10);
+    overflow: hidden;
+    transform: scale(1);
+    
+}
+.member img {
+    width: 100%;
+    height: 100%; 
+    transition: transform 0.7s;
+}
+.member__name {
+    font-family: var(--primary-font);
+    font-size: var(--font20);
+    color : var(--color-black);
+    font-weight: 800;
+}
+.member__designation {
+    font-family: var(--secondary-font);
+    font-size: var(--font14);
+    color : var(--color-gray);
+    margin: 0 0 var(--font15) 0;
+    
+}
+.member__btnLine {
+    bottom: var(--fontm40);
+    
+    background-color: var(--color-white);
+}
+.member__btnLine button {
+    padding : var(--font10);
+    border-radius: 50% 50% 0 0;
+    height: var(--font40);
+    border: none;
+    background-color: var(--color-orange);
+}
+.member__btnLine i {
+    background-color : var(--color-orange);
+    color : var(--color-white);
+    font-size: var(--font16);
+}
+.member__btnHidden {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom : 0;
+    background-color: var(--color-lightBackground);
+    transition: height 0.7s;
+}
+
+/* Testimonial Part */
+#testimonials {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-lightBackground);
+    position: relative;
+    padding-bottom: 600px;
+    overflow: hidden;
+}
+.testimonials__titleContainer {
+    display: flex;
+    padding-top: var(--font40);
+    align-items: center;
+}
+.testimonials__title {
+    font-family: var(--title-font);
+    font-size: var(--font20);
+    color : var(--color-orange);
+    font-weight: 400;
+    
+}
+.testimonials__subtitle {
+    font-family: var(--primary-font);
+    font-size: var(--font40);
+    font-weight: 800;
+    margin-top: 0;
+}   
+.testimonials__forArea {
+    width: 100%;
+    height: 00px;
+}
+.testimonials_testimonial {
+    position: absolute;
+    top : var(--font200);
+    display: flex;
+    /* 대략적으로 width 잡아둠 */
+    width: 100%;
+    box-sizing: border-box;
+    padding : 0;
+    left : 0;
+    transition: left 0.7s;
+}
+.testimonial {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    float : left;
+    width: calc(100%*0.3);
+    border: 1px solid var(--color-gray);
+    padding : var(--font10);
+    box-sizing: border-box;
+}
+.testimonial.colored {
+    background-color: var(--color-orange);
+}
+.testimonial:first-child {
+    margin-left: 0;
+}
+.testimonial:last-child {
+    margin-right: 0;
+}
+.testimonial__client {
+    display: flex;
+    width: 100%;
+    padding : var(--font10);
+}
+.testimonial i {
+    font-size: var(--font48);
+    color: var(--color-orange);
+}
+.testimonial i.colored {
+    color : var(--color-white);
+}
+.testimonial__client img {
+    width: 30%;
+    border-radius: 50%;
+}
+.testimonal__saying {
+    font-size: var(--font16);
+    font-family: var(--secondary-font);
+    color : var(--color-gray);
+}
+.testimonal__saying.colored {
+    color : var(--color-white);
+}
+.client__information {
+    display: flex;
+    flex-direction: column;
+    padding: var(--font10);
+}
+.client__information--name {
+    font-size: var(--font20);
+    font-family: var(--primary-font);
+    color : var(--color-black);
+    font-weight: 700;
+}
+.client__information--name.colored {
+    color : var(--color-white);
+}
+.client__information--profession {
+    font-size: var(--font14);
+    font-family: var(--secondary-font);
+    color : var(--color-gray);
+    margin : 0;
+}
+.client__information--profession.colored {
+    color : var(--color-white);
+}
+.testimonials__btns {
+    position: absolute;
+    bottom: 0;
+    left : 50%;
+    transform: translateX(-50%);
+}
+.testimonials__btns button {
+    width: var(--font20);
+    height: var(--font20);
+    border-radius: 50%;
+    border: 1px solid var(--color-gray);
+    background-color: var(--color-lightBackground);
+    margin : var(--font10);
+}
+.testimonials__btns button.colored {
+    background-color: var(--color-orange);
 }

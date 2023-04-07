@@ -20,7 +20,7 @@
 
     <!-- Css link & Js link -->
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -145,7 +145,12 @@
 
     <!-- Food Parts -->
     <section id="foods">
-        <h1 class="foods__title"></h1>
+        <div class="foods__titleContainer">
+            <span class="titleLine"></span>
+            <span class="foods__title">&nbsp;&nbsp;Food menu&nbsp;&nbsp;</span>
+            <span class="titleLine"></span>
+        </div>
+        <span class="foods__subtitle">Most Popular Items</span>
         <div class="foods__collections">
             <button class="collection">
                 <i class="fa-solid fa-mug-saucer"></i>
@@ -162,7 +167,7 @@
                 </div>
             </button>
             <button class="collection">
-                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-utensils"></i> 
                 <div>
                     <span class="collection__hyung">Lovely</span>
                     <p class="collection__meal">Dinner</p>
@@ -357,7 +362,29 @@
                     </p>
                 </div>
             </div>
-            <div class="choice" data-type="Launch">
+            <div class="choice" data-type="Dinner">
+                <img src="./image/menu-8.jpg" alt="Dinner__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Dinner</span>
+                        <span class="detail__up--cost">$125</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Dinner">
+                <img src="./image/menu-7.jpg" alt="Dinner__Img">
+                <div class="choice__detail">
+                    <div class="detail__up">
+                        <span class="detail__up--name">Dinner</span>
+                        <span class="detail__up--cost">$125</span>
+                    </div>
+                    <p class="detail__down">Ipsum ipsum clita erat amet dolor justo diam
+                    </p>
+                </div>
+            </div>
+            <div class="choice" data-type="Dinner">
                 <img src="./image/menu-8.jpg" alt="Dinner__Img">
                 <div class="choice__detail">
                     <div class="detail__up">
@@ -374,10 +401,11 @@
     <!-- Reservation Part -->
     <section id="reservation">
         <div class="reservation__bgYoutube">
-            <button><span></span></button>
+            <button><i class="fa-solid fa-play fa-3x"></i></button>
+            <button></button>
         </div>
         <div class="reservation__online">
-            <h2 class="online__title">Reservation <span></span> </h2>
+            <h2 class="online__title">Reservation&nbsp;&nbsp; <span class="titleLine"></span> </h2>
             <h1 class="online__subtitle">Book A Table Online</h1>
             <form method="post">
                 <input type="text" placeholder="Your Name">
@@ -389,44 +417,107 @@
                     <option value="People2">People2</option>
                     <option value="People3">People3</option>
                 </select>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit">BOOK NOW
+                <textarea name="" id="" cols="30" rows="10" placeholder="Special Request"></textarea>
+                <input type="submit" value="BOOK NOW" >
             </form>
         </div>
     </section>
 
     <!-- members Part -->
     <section id="members">
-        <h1 class="members__title">Team members</h1>
+        <div class="members__titleContainer">
+            <span class="titleLine"></span>
+            <span class="members__title">&nbsp;&nbsp;Team members&nbsp;&nbsp;</span>
+            <span class="titleLine"></span>
+        </div>
         <h2 class="members__subtitle">Our Master Chefs</h2>
         <div class="members__member">
             <div class="member">
-                <img src="./image/team-1.jpg" alt="Member1">
+                <div class="member__img">
+                    <img src="./image/team-1.jpg" alt="Member1">
+                </div>
                 <p class="member__name">Full Name</p>
                 <p class="member__designation">designation</p>
+                <div class="member__btnLine">
+                    <button class="btnLine__facebook-f">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                    <button class="btnLine__twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </button>
+                    <button class="btnLine__instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </button>
+                </div>
+                <div class="member__btnHidden"></div>
             </div>
             <div class="member">
-                <img src="./image/team-2.jpg" alt="Member2">
+                <div class="member__img">
+                    <img src="./image/team-2.jpg" alt="Member2">
+                </div>
                 <p class="member__name">Full Name</p>
                 <p class="member__designation">designation</p>
+                <div class="member__btnLine">
+                    <button class="btnLine__facebook-f">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                    <button class="btnLine__twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </button>
+                    <button class="btnLine__instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </button>
+                </div>
+                <div class="member__btnHidden"></div>
             </div>
             <div class="member">
-                <img src="./image/team-3.jpg" alt="Member3">
+                <div class="member__img">
+                    <img src="./image/team-3.jpg" alt="Member3">
+                </div>
                 <p class="member__name">Full Name</p>
                 <p class="member__designation">designation</p>
+                <div class="member__btnLine">
+                    <button class="btnLine__facebook-f">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                    <button class="btnLine__twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </button>
+                    <button class="btnLine__instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </button>
+                </div>
+                <div class="member__btnHidden"></div>
             </div>
             <div class="member">
-                <img src="./image/team-4.jpg" alt="Member4">
+                <div class="member__img">
+                    <img src="./image/team-4.jpg" alt="Member4">
+                </div>
                 <p class="member__name">Full Name</p>
                 <p class="member__designation">designation</p>
+                <div class="member__btnLine">
+                    <button class="btnLine__facebook-f">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                    <button class="btnLine__twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </button>
+                    <button class="btnLine__instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </button>
+                </div>
+                <div class="member__btnHidden"></div>
             </div>
         </div>
     </section>
 
     <!-- Testimonial Part -->
     <section id="testimonials">
-        <h1 class="testimonials__title">Testimonial</h1>
+        <div class="testimonials__titleContainer">
+            <span class="titleLine"></span><h1 class="testimonials__title">&nbsp;&nbsp;Testimonial&nbsp;&nbsp;</h1><span class="titleLine"></span>
+        </div>       
         <h2 class="testimonials__subtitle">Our Clients Say!!!</h2>
+        <div class="testimonials__forArea"></div>
         <ul class="testimonials_testimonial">
             <li class="testimonial">
                 <i class="fa-solid fa-quote-left"></i>
@@ -480,12 +571,13 @@
                     </div>
                 </div>
             </li>
+            
         </ul>
         <div class="testimonials__btns">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button data-number="1"></button>
+            <button data-number="2"></button>
+            <button data-number="3"></button>
+            <button data-number="4"></button>
         </div>
     </section>
     <footer id="footer">
