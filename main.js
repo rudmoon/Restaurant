@@ -45,31 +45,35 @@ floatLeft();
 function gotoSlide(idx) {
     slides.style.left = -idx * (slideWidth+slideMargin) + 'px';
     currentIdx = idx;
+    for(let i=0; i<slideCount; i++) {
+        slideBtn[i].classList.remove("colored");
+        slide[i].classList.remove("colored");
+        slidei[i].classList.remove("colored");
+        slidesay[i].classList.remove("colored");
+        slideinf[i].classList.remove("colored");
+        slideprof[i].classList.remove("colored");
+    }
+    slideBtn[currentIdx].classList.add('colored');
+    slide[currentIdx].classList.add('colored');
+    slidei[currentIdx].classList.add('colored');
+    slidesay[currentIdx].classList.add('colored');
+    slideinf[currentIdx].classList.add('colored');
+    slideprof[currentIdx].classList.add('colored');    
     // idx++;
     // if(currentIdx>slideCount) {
     //     currentIdx = 0;
     // }
 }
-
+function moveSlide(idx) {
+    activateSlide(idx);
+    stopAutoslide();
+    startAutoslide();
+  }
 // gotoslide func에 잡다한 부분 다 넣고, slideBtn[i].addEventListener('click',(ev) 이부분을 gotoslide(ev.target 이런식으로)
 for(let i=0; i<slideCount; i++) { 
-    slideBtn[i].addEventListener('click',(ev) => {
-        for(let j=0; j<slideCount; j++) {
-            slideBtn[j].classList.remove('colored');
-            slide[j].classList.remove('colored');
-            slidei[j].classList.remove('colored');
-            slidesay[j].classList.remove('colored');
-            slideinf[j].classList.remove('colored');
-            slideprof[j].classList.remove('colored');
-        }
-        gotoSlide(ev.target.dataset.number-1);
-        slideBtn[ev.target.dataset.number-1].classList.add('colored');
-        slide[ev.target.dataset.number-1].classList.add('colored');
-        slidei[ev.target.dataset.number-1].classList.add('colored');
-        slidesay[ev.target.dataset.number-1].classList.add('colored');
-        slideinf[ev.target.dataset.number-1].classList.add('colored');
-        slideprof[ev.target.dataset.number-1].classList.add('colored');
-    })
+    slideBtn[i].addEventListener("click", (ev) => {
+        gotoSlide(ev.target.dataset.number - 1);
+    });
 }
 
 
@@ -102,6 +106,7 @@ gotoSlideZero();
         }
         gotoSlide(currentIdx);
     }
-
-    startAutoslide();
+    window.addEventListener("load", startAutoslide);
+    slideWrapper.addEventListener("mouseleave", startAutoslide);
+    slideWrapper.addEventListener("mouseenter", stopAutoslide);
 
