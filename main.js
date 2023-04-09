@@ -68,7 +68,8 @@ function moveSlide(idx) {
     activateSlide(idx);
     stopAutoslide();
     startAutoslide();
-  }
+}
+
 // gotoslide func에 잡다한 부분 다 넣고, slideBtn[i].addEventListener('click',(ev) 이부분을 gotoslide(ev.target 이런식으로)
 for(let i=0; i<slideCount; i++) { 
     slideBtn[i].addEventListener("click", (ev) => {
@@ -106,7 +107,7 @@ gotoSlideZero();
         }
         gotoSlide(currentIdx);
     }
-    window.addEventListener("load", startAutoslide);
+    // window.addEventListener("load", startAutoslide);
     slideWrapper.addEventListener("mouseleave", startAutoslide);
     slideWrapper.addEventListener("mouseenter", stopAutoslide);
 
