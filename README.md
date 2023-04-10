@@ -29,3 +29,4 @@
 * Scrolltop시, 처음으로 보이는 navbar가 보이고, 그 이하로 Scroll down하면 fixedNav로 교체하게끔 함.
 * Slide show + AutoSlide => makingClone, setInterval, clearInterval 등 활
 * gotoTop arrow
+* goto specific Area(Home, aboutSection, serviceSection, foodSection)
