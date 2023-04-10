@@ -35,7 +35,6 @@ let newslideCount = newslide.length;
 function floatLeft() {
     
 
-    console.log(newslide);
     for(let i=0; i<newslideCount; i++) {
         newslide[i].style.left = i * (slideWidth+slideMargin) + 'px';
     }
@@ -110,4 +109,103 @@ gotoSlideZero();
     // window.addEventListener("load", startAutoslide);
     slideWrapper.addEventListener("mouseleave", startAutoslide);
     slideWrapper.addEventListener("mouseenter", stopAutoslide);
+
+
+// 2. Scrolltop시, fixed된 navbar display :none, 그 이하시 보이게(width는 100%)
+
+function navbarFixed() {
+    const navbarHidden = document.querySelector('.fixedNav');
+
+    window.addEventListener('scroll', () => {
+    if(window.scrollY>100) {
+        navbarHidden.classList.add('show');
+    } else {
+        navbarHidden.classList.remove('show');
+    }
+});
+};
+
+navbarFixed();
+
+// 3. ArrowtotheTop
+function gotoTopArrow() {
+    const gototopArrow = document.querySelector('#gotoTop');
+let serviceSection = document.querySelector('#services');
+    window.addEventListener('scroll', (ev) => {
+        ev.preventDefault();
+        if(window.scrollY>serviceSection.getBoundingClientRect().height) {
+            gototopArrow.classList.add('show');
+        } else {
+            gototopArrow.classList.remove('show');
+        }
+    });
+
+    gototopArrow.addEventListener('click',(ev) => {
+        ev.preventDefault();
+        window.scroll({
+            top : 0,
+            behavior : 'smooth',
+        })
+    })
+};
+
+gotoTopArrow();
+
+// 4. Header section 홈페이지 load되면? or scrolly가 도착하면(난 이걸로 함) load 되는것
+const navSection = document.querySelector('#nav');
+const navLogo = document.querySelector('.nav__logo');
+const navMenus = document.querySelector('.nav__menus');
+const headerleftTitle = document.querySelector('.leftContent__title');
+const headerlefScript = document.querySelector('.leftContent__script');
+const headerleftBtn = document.querySelector('.leftContent__bookBtn');
+
+window.addEventListener('load', () => {
+    navLogo.classList.add('show');
+    navMenus.classList.add('show');
+    headerleftTitle.classList.add('show');
+    headerlefScript.classList.add('show');
+    headerleftBtn.classList.add('show');
+})
+
+// 5. Service section 부분, scroll이 어느정도(serviceSection에 도달했을 떄로 하자) 내려왔을 때 하나씩 등장
+function appearServicesection() {
+    const headerSection = document.querySelector('#header');
+    const serviceSection = document.querySelector('#services');
+    const service = document.querySelectorAll('.service');
+
+    window.addEventListener('scroll',() => {
+        if(window.scrollY >= serviceSection.getBoundingClientRect().top - 700) {
+            for(let i=0; i<service.length; i++) {
+                service[i].classList.add('appear');
+            }
+        }
+    })
+}
+appearServicesection();
+
+// 6. About section 사진부터, 다음 description 부분
+function appearAboutimg() {
+    const aboutSection = document.querySelector("#about");
+    const aboutDescription = document.querySelector('.about__description');
+    const aboutImg = document.querySelectorAll('.aboutImg');
+    const toFifteen = document.querySelector('.first__left').textContent;
+    const toFifty = document.querySelector('.second__left').textContent;
+
+
+
+window.addEventListener('scroll',() => {
+    if(window.scrollY>aboutSection.getBoundingClientRect().top) {
+        aboutDescription.classList.add('show');
+        for(let i=0; i<aboutImg.length; i++) {
+            aboutImg[i].classList.add('show');
+        }      
+    }
+});
+}
+
+appearAboutimg();
+
+// 7. 
+
+
 
