@@ -2,7 +2,7 @@
 
 #### Visit the site : [Restaurant](https://rudmoon.github.io/Restaurant/)
 
-아직 미완성입니다.(23/04/10 진행중..)
+아직 반응형 부분 미완성입니다.(23/04/11 진행중..)
 
 ## Tech Stack
 <div>
@@ -21,3 +21,12 @@
 </br>
 
 
+## JS skills(전체적인 모듈화 => 최종 init();이 될 수 있게 )
+* appear부분은 window.scroll시, 그 Section top에 도달 시, 그 부분이 로드 되도록 한것.
+* appearRservation, appearFood, appearAbout, appearServicesection, appearNav,
+* Food Section에서 각 dataset 부여해서 Breakfast, Launch, Dinner 나눔
+* About Section에서 setInterval과 clearInterval을 활용하여 숫자를 각 15,50 에서 멈추게함.
+* Scrolltop시, 처음으로 보이는 navbar가 보이고, 그 이하로 Scroll down하면 fixedNav로 교체하게끔 함.
+* Slide show + AutoSlide => makingClone, setInterval, clearInterval 등 활
+* gotoTop arrow
+* goto specific Area(Home, aboutSection, serviceSection, foodSection)
