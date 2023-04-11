@@ -281,13 +281,42 @@ function appearReservation() {
         }
     })
 
+}
 
+// 9. 구성이 맞지않아, about/service/menu에만 구현하였음.
+function gototArea() {
+    const navMenus = document.querySelectorAll('.menu');
+    const fixednavMenus = document.querySelectorAll('.fixedNavnav__menus li');
+    const aboutSection = document.querySelector("#about");
+    const serviceSection = document.querySelector('#services');
+    const foodSection = document.querySelector('#foods');
+    let sections1 = [aboutSection, serviceSection, foodSection];
 
+    for(let i=1; i<=3; i++) {
+        navMenus[i].addEventListener('click', (ev) => {
+            ev.preventDefault();
+            window.scroll({
+                top : sections1[i-1].getBoundingClientRect().top+window.scrollY,
+                left : 0,
+                behavior : 'smooth',
+            })
+        });
+    }
+    for(let j=1; j<=3; j++) {
+        fixednavMenus[j].addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scroll({
+                top : sections1[j-1].getBoundingClientRect().top+window.scrollY,
+                left : 0,
+                behavior : 'smooth',
+            })
+        })
+    }
 }
 
 
 function init() {
-
+    gototArea();
     slideShow();
     gotoTopArrow();
     navbarFixed();
