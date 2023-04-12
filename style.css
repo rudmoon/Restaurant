@@ -51,7 +51,6 @@ ul,li {
 
 #header {
     width: 55%;
-    min-width: 55rem;
     background: url(./image/bg-hero.jpg) no-repeat center/cover var(--color-darkBackground);
     background-blend-mode: multiply;
     padding : var(--font10) 0;
@@ -200,12 +199,13 @@ ul,li {
         transform: rotate(360deg);
     }
 }
-
+.hiddenBurger {
+    display: none;
+}
 /* Services Part */
 #services {
     padding: var(--font100) 0;
     width: 55%;
-    min-width: 55rem;
     display: flex;
     justify-content: space-evenly;
     background-color: var(--color-lightBackground);
@@ -270,7 +270,6 @@ ul,li {
     display: flex;
     justify-content: space-evenly;
     width: 55%;
-    min-width: 55rem;
     background-color: var(--color-lightBackground);
 }
 .about__storeImgs {
@@ -416,7 +415,6 @@ ul,li {
     flex-direction: column;
     background-color: var(--color-lightBackground);
     width: 55%;
-    min-width: 55rem;
     align-items: center;
     padding : var(--font10);
     box-sizing: border-box;
@@ -549,7 +547,6 @@ ul,li {
     position: relative;
     padding-top: var(--font100);
     width: 55%;
-    min-width: 55rem;
     display: flex;
     background-color: var(--color-lightBackground);
     left: -200px;
@@ -672,8 +669,8 @@ ul,li {
 
 /* Members Part */
 #members {
+    position: relative;
     width: 55%;
-    min-width: 55rem;
     background-color: var(--color-lightBackground);
     display: flex;
     flex-direction: column;
@@ -774,7 +771,6 @@ ul,li {
 /* Testimonial Part */
 #testimonials {
     width: 55%;
-    min-width: 55rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -907,7 +903,6 @@ ul,li {
     display: flex;
     flex-direction: column;
     width: 55%;
-    min-width: 55rem;
     margin-top: var(--font100);
     padding : var(--font64) var(--font20) var(--font20) var(--font20);
     box-sizing: border-box;
@@ -1017,7 +1012,6 @@ ul,li {
 
 .fixedNav {
     width: 100%;
-    min-width: 100%;
     background-color: var(--color-darkBackground);
     position: fixed;
     display: flex;
@@ -1076,7 +1070,13 @@ ul,li {
     opacity: 1;
 }
 
-@media screen and (max-width: 904px) {
+@media screen and (max-width: 1450px) {
+    #header {
+        width: 100%;
+    }
+    #nav {
+        position: relative;
+    }
     .nav__menus {
         display: none;
     }
@@ -1088,5 +1088,120 @@ ul,li {
         cursor: pointer;
         padding : 0;
         margin : 0;
+        position: absolute;
+        display: block;
+        right : var(--font32);
+        top : var(--font24);
+    }
+    .header__underContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: var(--font14);
+    }
+    .header__leftContent {
+        padding-top: 0;
+        padding-bottom: var(--font32);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 1250px) {
+        #services {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .service {
+            width: 48%;
+            margin : var(--font10);
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .about__description.show {
+            margin-top: var(--font40);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .description__readMore {
+            margin-top: var(--font40);
+        }
+        #foods {
+            width: 100%;
+        }
+        #reservation {
+            width: 100%;
+        }
+        #members {
+            width: 100%;
+        }
+        #testimonials {
+            width: 100%;
+        }
+        #footer {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 818px) {
+        .description__experiences {
+            display: flex;
+            flex-direction: column;
+        }
+        .experience__first {
+            margin-bottom: var(--font16);
+        }
+        .foods_choicesContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .choice {
+            width: 70%;
+        }
+        #reservation {
+            flex-wrap: wrap;
+        }
+        .reservation__bgYoutube {
+            width: 100%;
+        }
+        .reservation__online {
+            width: 100%;
+        }
+        #members {
+            margin-top: 600px;
+        }
+        .members__member {
+            flex-wrap: wrap;
+        }
+        .member {
+            width: 35%;
+        }
+        .testimonial {
+            width: 40%;
+        }
+        .footer__up {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer__up>div {
+            width: 40%;
+        }
+        .footer__down {
+            flex-direction: column;
+        }
+        .footer__down--right {
+            display: flex;
+        }
     }
 }
