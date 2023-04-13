@@ -1234,6 +1234,12 @@ ul,li {
         }
     }
     @media screen and (max-width: 480px) {
+        .foods__subtitle {
+            font-size: var(--font32);
+        }
+        .foods__collections {
+            flex-direction: column;
+        }
         #reservation {
             padding-bottom: var(--font48);
         }
