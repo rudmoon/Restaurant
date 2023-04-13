@@ -109,6 +109,7 @@ slideWrapper.addEventListener("mouseenter", stopAutoslide);
 
 
 
+
 // 2. Scrolltop시, fixed된 navbar display :none, 그 이하시 보이게(width는 100%)
 
 function navbarFixed() {

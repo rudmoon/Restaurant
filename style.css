@@ -988,7 +988,7 @@ ul,li {
     margin-right: var(--font10);
 }
 .footer__down--right li:not(:last-child)::after {
-    content: '   |';
+    content: '|';
 }
 .footer__Newsletter form {
     position: relative;
@@ -1018,7 +1018,7 @@ ul,li {
     justify-content: space-around;
     align-items: center;
     padding: var(--font5) 0;
-    top: -100px;
+    top: -250px;
     transition: top 0.7s;
 }
 .fixedNav.show {
@@ -1068,6 +1068,9 @@ ul,li {
 }
 #gotoTop.show {
     opacity: 1;
+}
+.fixedHiddenBurger {
+    display: none;
 }
 
 @media screen and (max-width: 1450px) {
@@ -1150,6 +1153,7 @@ ul,li {
         #footer {
             width: 100%;
         }
+        
     }
     @media screen and (max-width: 818px) {
         .description__experiences {
@@ -1202,6 +1206,54 @@ ul,li {
         }
         .footer__down--right {
             display: flex;
+        }
+        .fixedNav {
+            justify-content: flex-start;
+            padding-left: var(--font40);
+        }
+        .fixedNavnav__menus {
+            display: none;
+        }
+        .fixedHiddenBurger {
+            background-color: transparent;
+            color : var(--color-white);
+            border : none;
+            font-size: var(--font24);
+            cursor: pointer;
+            padding : 0;
+            margin : 0;
+            position: absolute;
+            display: block;
+            right : var(--font40);
+            top : var(--font20);
+        }
+        .footer__down--right li {
+            display: flex;
+            margin-right: var(--font10);
+        }
+    }
+    @media screen and (max-width: 480px) {
+        #reservation {
+            padding-bottom: var(--font48);
+        }
+        .member {
+            width: 60%;
+        }
+        .footer__up>div {
+            width: 70%;
+            align-items: start;
+        }
+        .footer__up>div:last-child {
+            margin-bottom: var(--font15);
+        }
+        .footer__down {
+            padding-top: var(--font10);
+        }
+        .footer__down--left {
+            font-size: var(--font10);
+        }
+        .footer__down--right {
+            font-size: var(--font14);
         }
     }
 }
