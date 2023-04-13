@@ -314,6 +314,52 @@ function gototArea() {
         })
     }
 }
+// 10. 모달창 구현
+function modalMake() {
+    let modalBtn1 = document.querySelector('.fixedHiddenBurger');
+    let modalBtn2 = document.querySelector('.hiddenBurger');
+    let modalBtnX = document.querySelector('.infLine__X');
+    let modal = document.querySelector('#btnModal');
+    const modalUl = document.querySelector('.btnModal__lists');
+    const modalMenus = document.querySelectorAll('.btnModal__list');
+    const headerSection = document.querySelector("#header");
+    const aboutSection = document.querySelector("#about");
+    const serviceSection = document.querySelector('#services');
+    const foodSection = document.querySelector('#foods');
+    let sections1 = [aboutSection, serviceSection, foodSection];
+
+    function openModal() {
+        modal.classList.add('active');    
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');    
+        document.body.style.overflow = 'auto';
+    }
+
+    modalBtn1.addEventListener('click',openModal);
+    modalBtn2.addEventListener('click',openModal);
+    modalBtnX.addEventListener('click',closeModal);
+
+    modalUl.addEventListener('click',(ev) => {
+        ev.preventDefault();
+        const target = ev.target;
+        const href = target.getAttribute('href');
+        console.log(href);
+
+        if(href && href.startsWith('#')) {
+            const setction = document.querySelector(href);
+            
+            closeModal();
+            window.scrollTo({
+                top : setction.offsetTop,
+                behavior : 'smooth',
+            })
+        }
+        
+    })
+}
 
 function init() {
     gototArea();
@@ -325,6 +371,7 @@ function init() {
     appearAbout();
     appearFood();
     appearReservation();
+    modalMake();
 }
 
 init();
