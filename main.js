@@ -314,13 +314,6 @@ function gototArea() {
         })
     }
 }
-// 10 . window.resize시 새로고침
-
-window.addEventListener("resize", handleResize);
-
-function handleResize() {
-    location.reload();
-}
 
 function init() {
     gototArea();
