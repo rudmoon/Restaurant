@@ -1197,6 +1197,7 @@ ul,li {
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
         .footer__up>div {
             width: 40%;
