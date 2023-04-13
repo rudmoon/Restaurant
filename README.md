@@ -1,8 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Restaurant%20&fontSize=90)
 
-#### Visit the site : [Restaurant](https://rudmoon.github.io/Restaurant/)
-
-아직 반응형 부분 미완성입니다.(23/04/11 진행중..)
+#### Visit the site : [Restaurant] (https://rudmoon.github.io/Restaurant/)
+#### Original : [Restaurant] https://www.free-css.com/free-css-templates/page290/restoran
 
 ## Tech Stack
 <div>
