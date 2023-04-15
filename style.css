@@ -1085,9 +1085,11 @@ ul,li {
     background-color: var(--color-darkBackground);
     right : -1500px;
     transition: right 0.2s ease-in-out;
+    visibility: hidden;
 }
 #btnModal.active {
     right : 0;
+    visibility: visible;
 }
 .btnModal__lists {
     width: 70%;
