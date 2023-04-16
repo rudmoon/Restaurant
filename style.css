@@ -955,6 +955,7 @@ ul,li {
     border: 1px solid var(--color-white);
     border-radius: 50%;
     padding : var(--font5);
+    cursor: pointer;
 }
 .opening__lists li {
     font-size: var(--font16);
